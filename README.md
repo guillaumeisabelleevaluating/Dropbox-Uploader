@@ -1,3 +1,16 @@
+# Droxul
+
+## Installing alias into .bashrc
+```bash
+mkdir -p apps && cd  $_ && mkdir droxul && cd $_ && npm init --y && npm i droxul --save
+echo 'alias droxul="~/apps/droxul/node_modules/droxul/dropbox_uploader.sh "'>>~/.bashrc
+```
+
+## Usage: 
+```bash
+#upload
+droxul upload mybackup.tar.gz /backups/mybackup.tar.gz 
+```
 # Dropbox Uploader
 
 Dropbox Uploader is a **BASH** script which can be used to upload, download, delete, list files (and more!) from **Dropbox**, an online file sharing, synchronization and backup service. 
