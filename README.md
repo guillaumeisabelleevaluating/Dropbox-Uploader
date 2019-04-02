@@ -11,7 +11,14 @@ echo 'alias droxul="~/apps/droxul/node_modules/droxul/dropbox_uploader.sh "'>>~/
 #upload
 droxul upload mybackup.tar.gz /backups/mybackup.tar.gz 
 ```
-# Dropbox Uploader
+
+
+---
+---
+
+## based on: Dropbox Uploader
+* from : andreafabrizi
+
 
 Dropbox Uploader is a **BASH** script which can be used to upload, download, delete, list files (and more!) from **Dropbox**, an online file sharing, synchronization and backup service. 
 
