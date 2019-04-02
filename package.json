@@ -1,0 +1,28 @@
+{
+  "name": "Dropbox-Uploader",
+  "version": "1.0.0",
+  "description": "Dropbox Uploader is a **BASH** script which can be used to upload, download, delete, list files (and more!) from **Dropbox**, an online file sharing, synchronization and backup service.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "dk:build": "docker build -t droxul .",
+    "dk:build:test": "docker build -t droxul-test tests/",
+    "dk:run-fg": "docker run -it  -v ${PWD}:/usr/src/app  -v /usr/src/app/node_modules   -p 4200:4200   --rm   droxul",
+    "dk:run-fg:test": "docker run -it  -v ${PWD}:/usr/src/app  -v /usr/src/app/node_modules   -p 9876:9876   --rm   droxul-test",
+    "dk:run-bg": "yarn dk:stop;docker run -d  -v ${PWD}:/usr/src/app -v /usr/src/app/node_modules -p 4200:4200 --name   droxul-container droxul",
+    "dk:run": "npm run dk:run-bg",
+    "dk:stop": "docker stop droxul-container;docker rm droxul-container"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guillaumeisabelleevaluating/Dropbox-Uploader.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guillaumeisabelleevaluating/Dropbox-Uploader/issues"
+  },
+  "homepage": "https://github.com/guillaumeisabelleevaluating/Dropbox-Uploader#readme"
+}
