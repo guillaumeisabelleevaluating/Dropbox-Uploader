@@ -1,6 +1,6 @@
 # Droxul
 
-## Installing alias into .bashrc
+## Installing + alias into .bashrc
 ```bash
 mkdir -p apps && cd  $_ && mkdir droxul && cd $_ && npm init --y && npm i droxul --save
 echo 'alias droxul="~/apps/droxul/node_modules/droxul/dropbox_uploader.sh "'>>~/.bashrc
