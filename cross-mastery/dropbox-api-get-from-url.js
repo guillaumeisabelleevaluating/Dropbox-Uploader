@@ -2,11 +2,15 @@
 
 var fetch = require('isomorphic-fetch'); // or another library of choice.
 var fs = require('fs');
+
+var path = require('path');
 var Dropbox = require('dropbox').Dropbox;
 var token = process.env.DROPBOX_TOKEN;
 var dbx = new Dropbox({ accessToken: token, fetch: fetch });
 var annoter_file = "9c6a35efe357580f32e759908430643d.annoter.txt";
 var annoter_folder_path = '/x/_/_db/annoter';
+
+var target_save_path = path.join(__dirname,  annoter_file);
 var annoter_file_path = annoter_folder_path + '/' + annoter_file;
 dbx.filesListFolder({ path: annoter_folder_path })
   .then(function (response) {
@@ -26,10 +30,10 @@ dbx.filesListFolder({ path: annoter_folder_path })
             dbx.sharingGetSharedLinkFile({ url: lnk.url })
               .then(function (data) {
                 console.log("\t-----Downloaded from URL completed------");
-                var fname = '_' + data.name;
-                fs.writeFile(fname, data.fileBinary, 'binary', function (err) {
+                var fname =   data.name;
+                fs.writeFile(target_save_path, data.fileBinary, 'binary', function (err) {
                   if (err) { throw err; }
-                  console.log('File: ' + fname + ' saved.');
+                  console.log('File: ' + target_save_path + ' saved.');
                 });
               })
               .catch(function (err) {

@@ -1,9 +1,21 @@
 # Droxul
 
 ## Installing + alias into .bashrc
+### Install the distribution
 ```bash
 mkdir -p apps && cd  $_ && mkdir droxul && cd $_ && npm init --y && npm i droxul --save
 echo 'alias droxul="~/apps/droxul/node_modules/droxul/dropbox_uploader.sh "'>>~/.bashrc
+```
+```bash
+# install 2
+cd ; mkdir -p apps ; cd apps ; npm init --y ; npm install droxul --save
+cd ;echo alias droxul=\"~/apps/node_modules/droxul/dropbox_uploader.sh \" >> .bashrc
+```
+### Install your Dropbox API Key
+* Run droxul
+```bash
+droxul
+# You should be asked/being forwarded for your API key
 ```
 
 ## Usage: 
