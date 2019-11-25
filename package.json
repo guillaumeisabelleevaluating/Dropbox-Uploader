@@ -1,6 +1,6 @@
 {
   "name": "droxul",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Droxul -- Dropbox Uploader is a **BASH** script which can be used to upload, download, delete, list files (and more!) from **Dropbox**, an online file sharing, synchronization and backup service.",
   "main": "index.js",
   "scripts": {
@@ -15,11 +15,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/guillaumeisabelleevaluating/Dropbox-Uploader.git"
+    "url": "git@github.com:guillaumeisabelleevaluating/Dropbox-Uploader.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["dropbox","filesystem"],
+  "author": "andreafabrizi",
+  "license": "GNU",
   "bugs": {
     "url": "https://github.com/guillaumeisabelleevaluating/Dropbox-Uploader/issues"
   },
