@@ -18,6 +18,7 @@ cd ;echo alias droxul=\"~/apps/node_modules/droxul/dropbox_uploader.sh \" >> .ba
 ```bash
 droxul
 # You should be asked/being forwarded for your API key generator on the Dropbox site
+## Or go to: https://www.dropbox.com/developers/apps
 ```
 
 ## Usage: 
