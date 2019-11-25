@@ -3,11 +3,13 @@
 ## Installing + alias into .bashrc
 ### Install the distribution
 ```bash
-mkdir -p apps && cd  $_ && mkdir droxul && cd $_ && npm init --y && npm i droxul --save
-echo 'alias droxul="~/apps/droxul/node_modules/droxul/dropbox_uploader.sh "'>>~/.bashrc
+# Install 1 - Into its own directory in apps
+export DROXUL_INST_DIR_NAME=droxulapp;
+mkdir -p apps && cd  $_ && mkdir $DROXUL_INST_DIR_NAME && cd $_ && npm init --y && npm i droxul --save
+echo 'alias droxul="~/apps/$DROXUL_INST_DIR_NAME/node_modules/droxul/dropbox_uploader.sh "'>>~/.bashrc
 ```
 ```bash
-# install 2
+# install 2 - into a common app dir
 cd ; mkdir -p apps ; cd apps ; npm init --y ; npm install droxul --save
 cd ;echo alias droxul=\"~/apps/node_modules/droxul/dropbox_uploader.sh \" >> .bashrc
 ```
@@ -15,13 +17,52 @@ cd ;echo alias droxul=\"~/apps/node_modules/droxul/dropbox_uploader.sh \" >> .ba
 * Run droxul
 ```bash
 droxul
-# You should be asked/being forwarded for your API key
+# You should be asked/being forwarded for your API key generator on the Dropbox site
 ```
 
 ## Usage: 
 ```bash
 #upload
 droxul upload mybackup.tar.gz /backups/mybackup.tar.gz 
+droxul list /
+droxul download /backups/mybackup.tar.gz
+# ... Type only droxul on the prompt
+```
+### Full Usage list
+
+```txt
+Dropbox Uploader v1.0
+Andrea Fabrizi - andrea.fabrizi@gmail.com
+
+Usage: /home/jgi/x/droxul/dropbox_uploader.sh [PARAMETERS] COMMAND...
+
+Commands:
+         upload   <LOCAL_FILE/DIR ...>  <REMOTE_FILE/DIR>
+         download <REMOTE_FILE/DIR> [LOCAL_FILE/DIR]
+         delete   <REMOTE_FILE/DIR>
+         move     <REMOTE_FILE/DIR> <REMOTE_FILE/DIR>
+         copy     <REMOTE_FILE/DIR> <REMOTE_FILE/DIR>
+         mkdir    <REMOTE_DIR>
+         list     [REMOTE_DIR]
+         monitor  [REMOTE_DIR] [TIMEOUT]
+         share    <REMOTE_FILE>
+         saveurl  <URL> <REMOTE_DIR>
+         search   <QUERY>
+         info
+         space
+         unlink
+
+Optional parameters:
+        -f <FILENAME> Load the configuration file from a specific file
+        -s            Skip already existing files when download/upload. Default: Overwrite
+        -d            Enable DEBUG mode
+        -q            Quiet mode. Don't show messages
+        -h            Show file sizes in human readable format
+        -p            Show cURL progress meter
+        -k            Doesn't check for SSL certificates (insecure)
+        -x            Ignores/excludes directories or files from syncing. -x filename -x directoryname. example: -x .git
+
+For more info and examples, please see the README file.
 ```
 
 
