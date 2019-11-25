@@ -6,7 +6,7 @@
 # Install 1 - Into its own directory in apps
 export DROXUL_INST_DIR_NAME=droxulapp;
 mkdir -p apps && cd  $_ && mkdir $DROXUL_INST_DIR_NAME && cd $_ && npm init --y && npm i droxul --save
-echo 'alias droxul="~/apps/$DROXUL_INST_DIR_NAME/node_modules/droxul/dropbox_uploader.sh "'>>~/.bashrc
+echo "alias droxul=\"~/apps/$DROXUL_INST_DIR_NAME/node_modules/droxul/dropbox_uploader.sh \"">>~/.bashrc
 ```
 ```bash
 # install 2 - into a common app dir
