@@ -1,5 +1,8 @@
 # Droxul
 
+A Command-line tool to access Dropbox.
+
+
 ## Installing + alias into .bashrc
 ### Install the distribution
 ```bash
