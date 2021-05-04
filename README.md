@@ -33,8 +33,9 @@ droxul download /backups/mybackup.tar.gz
 ```txt
 Dropbox Uploader v1.0
 Andrea Fabrizi - andrea.fabrizi@gmail.com
+Packaged and distributed by: Guillaume Descoteaux-Isabelle,2018-2020
 
-Usage: /home/jgi/x/droxul/dropbox_uploader.sh [PARAMETERS] COMMAND...
+Usage: droxul [PARAMETERS] COMMAND...
 
 Commands:
          upload   <LOCAL_FILE/DIR ...>  <REMOTE_FILE/DIR>
@@ -67,6 +68,7 @@ For more info and examples, please see the README file.
 
 
 ---
+Bellow is credit and refs
 ---
 
 ## based on: Dropbox Uploader
