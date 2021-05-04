@@ -1,20 +1,15 @@
 # Droxul
 
-A Command-line tool to access Dropbox.
+A Command-line tool to access Dropbox for linux and GitBash
 
 
-## Installing + alias into .bashrc
-### Install the distribution
+## Install
+
 ```bash
-# Install 1 - Into its own directory in apps
-export DROXUL_INST_DIR_NAME=droxulapp;
-mkdir -p apps && cd  $_ && mkdir $DROXUL_INST_DIR_NAME && cd $_ && npm init --y && npm i droxul --save
-echo "alias droxul=\"~/apps/$DROXUL_INST_DIR_NAME/node_modules/droxul/dropbox_uploader.sh \"">>~/.bashrc
-```
-```bash
-# install 2 - into a common app dir
-cd ; mkdir -p apps ; cd apps ; npm init --y ; npm install droxul --save
-cd ;echo alias droxul=\"~/apps/node_modules/droxul/dropbox_uploader.sh \" >> .bashrc
+# Install 
+npm i droxul --g
+
+
 ```
 ### Install your Dropbox API Key
 * Run droxul
@@ -22,6 +17,7 @@ cd ;echo alias droxul=\"~/apps/node_modules/droxul/dropbox_uploader.sh \" >> .ba
 droxul
 # You should be asked/being forwarded for your API key generator on the Dropbox site
 ## Or go to: https://www.dropbox.com/developers/apps
+# Access token: 
 ```
 
 ## Usage: 
