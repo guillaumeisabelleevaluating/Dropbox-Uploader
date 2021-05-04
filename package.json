@@ -12,6 +12,8 @@
     "dk:run-bg": "yarn dk:stop;docker run -d  -v ${PWD}:/usr/src/app -v /usr/src/app/node_modules -p 4200:4200 --name   droxul-container droxul",
     "dk:run": "npm run dk:run-bg",
     "dk:stop": "docker stop droxul-container;docker rm droxul-container"
+  },"bin":{
+    "droxul":"dropbox_uploader.sh"
   },
   "repository": {
     "type": "git",
