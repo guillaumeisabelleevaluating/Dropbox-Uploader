@@ -20,10 +20,10 @@
 #
 
 #Looking for dropbox uploader
-if [ -f "./dropbox_uploader.sh" ]; then
-    DU="./dropbox_uploader.sh"
+if [ -f "./drox" ]; then
+    DU="./drox"
 else
-    DU=$(which dropbox_uploader.sh)
+    DU=$(which drox)
     if [ $? -ne 0 ]; then
         echo "Dropbox Uploader not found!"
         exit 1
