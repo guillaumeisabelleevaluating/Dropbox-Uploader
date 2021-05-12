@@ -14,7 +14,9 @@
     "dk:stop": "docker stop droxul-container;docker rm droxul-container"
   },
   "bin": {
-    "droxul": "dropbox_uploader.sh"
+    "droxul": "dropbox_uploader.sh",
+    "drox": "dropbox_uploader.sh",
+    "dros": "dropShell.sh"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,7 @@
   ],
   "author": "andreafabrizi",
   "license": "GNU",
+  "publisher": "Guillaume Descoteaux-Isabelle",
   "bugs": {
     "url": "https://github.com/guillaumeisabelleevaluating/Dropbox-Uploader/issues"
   },
